@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <style>
+        body { font-family: sans-serif; background: #333; color: #aaa; }
+
+        .levels-container { width:200px; float:left; }
+        .levels-container ul { list-style: none; margin: 0px; padding: 0px; }
+        .levels-container ul li { cursor:pointer; }
+
+
+        .controls { margin: 0px 0px 10px; padding: 0px; list-style:none; }
+        .controls li { display:inline-block; padding:5px 10px; cursor: pointer; }
+
+        .success { background: #2fee2f; }
+        .fail { background: #ee2033; }
+        .default { background:#fff; }
+
+        .content-container { float:left; }
+        #grid { display:block; width:300px }
+        .box { width: 40px; height: 40px; border:1px solid #eee; float:left; }
+        .on { background:#eee; }
+    </style>
+</head>
+<body>
+
+<div id="levelsMenu" class="levels-container">
+    <ul>
+
+    </ul>
+</div>
+
+<div class="content-container">
+    <ul class="controls">
+        <li id="new">new</li>
+        <li id="delete">delete</li>
+        <li id="save">save</li>
+    </ul>
+    <div id="grid"></div>
+</div>
+
+<script>
+    // will be loaded in on launch
+    var levels = [];
+    var dirty = false;
+    var conflict = false;
+
+    /**
+     * Entry
+     */
+    $.get('levels.txt', function(data) {
+        levels = JSON.parse(data);
+
+        buildLevelMenu();
+
+        // if there are no levels, create a new one
+        if(levels.length == 0)
+            $('#new').click();
+        else
+            $('#levelsMenu ul li').first().click();
+    });
+
+    /**
+     * Main Menu Controls
+     */
+    $('.controls li').click(function(){
+        switch($(this).attr('id'))
+        {
+            case "new":
+                $('#save').click();
+                if(!conflict)
+                {
+                    levels.push(blankArray.slice(0));
+                    buildLevelMenu();
+                    $('#levelsMenu ul li').last().click();
+                }
+                break;
+            case "delete":
+                conflict = dirty = false;
+                levels.splice($('#levelsMenu ul li.on').index(), 1);
+                saveLevels();
+                buildLevelMenu();
+                $('#levelsMenu ul li').first().click();
+                break;
+            case "save":
+                if(!dirty)
+                    return;
+                var arr = createArray();
+                // not a duplicate level is it?
+                if(!hasValues(arr))
+                {
+                    dirty = false;
+                    conflict = false;
+                    levels[$('#levelsMenu ul li.on').index()] = arr;
+                    saveLevels();
+                    $(this).toggleClass('success', 500, function() {
+                        $(this).toggleClass('success', 250);
+                    });
+                }
+                else
+                {
+                    conflict = true;
+                    $(this).toggleClass('fail', 500, function() {
+                        $(this).toggleClass('fail', 250);
+                    });
+                }
+                break;
+        }
+    });
+
+    function saveLevels()
+    {
+        var l = JSON.stringify(levels);
+        $.post('SaveLevel.php', {'fileName':'levels', 'levels':JSON.stringify(levels)}, function(data, status) {
+            console.log("data: " + data + "     status: " + status);
+        });
+
+        var objCString = createObjectCString();
+        $.post('SaveLevel.php', {'fileName':'objCLevels', 'levels':objCString}, function(data, status) {
+            console.log("data: " + data + "     status: " + status);
+        });
+    }
+
+    /**
+     *  Builds the level menu.
+     */
+    function buildLevelMenu()
+    {
+        $('#levelsMenu ul').empty();
+        for(var i = 0; i < levels.length; i++)
+        {
+            $('#levelsMenu ul').append('<li>Level ' + (i+1) + '</li>');
+            $('#levelsMenu ul li').click(function(e) {
+                $('#levelsMenu ul li.on').removeClass('on');
+                $(this).addClass('on');
+                buildLevel($(this).index());
+            })
+        }
+    }
+
+    /**
+     *  Builds a level on screen provided the index.
+     */
+    function buildLevel(index)
+    {
+        var arr = levels[index];
+
+        $('#grid').empty();
+        var boxCount = 0;
+        for(var i = 0; i < arr.length; i++)
+        {
+            $('#grid').append('<div id="'+boxCount+'" class="box"></div>');
+            if(arr[i] != 0)
+            {
+                $('#'+boxCount).addClass('on');
+            }
+            $('#'+boxCount).click(function() {
+                $(this).toggleClass('on');
+                dirty = true;
+            });
+            boxCount++;
+        }
+    }
+
+    function hasValues(arr)
+    {
+        var returnValue = false;
+        // loop each level
+        for(var i = 0; i < levels.length; i++)
+        {
+            var level = levels[i];
+            var levelEqual = true;
+            for(var j = 0; j < level.length; j++)
+            {
+                if(level[j] !== arr[j])
+                {
+                    levelEqual = false;
+                    break;
+                }
+            }
+
+            if(levelEqual)
+            {
+                returnValue = true;
+                break;
+            }
+        }
+        return returnValue;
+    }
+
+    /**
+     * Creates an Array from the current grid
+     */
+    function createArray()
+    {
+        var arr = [];
+        $('#grid .box').each(function(index) {
+            var val = $(this).hasClass('on') ? 1 : 0;
+            arr.push(val)
+        });
+        return arr;
+    }
+
+    function createObjectCString()
+    {
+        var returnValue = "@[";
+
+        for(var i = 0; i < levels.length; i++)
+        {
+            if(i > 0)
+                returnValue += ",";
+
+            var level = levels[i];
+            returnValue += "@[";
+            for(var j = 0; j < level.length; j++)
+            {
+                if(j > 0)
+                    returnValue += ",";
+                returnValue += "@" + level[j];
+            }
+            returnValue += "]";
+        }
+
+        returnValue += "];";
+        return returnValue;
+    }
+
+    /**
+     * Templated Blank Array
+     */
+    var blankArray = [];
+    for(var i = 0; i < 49; i++) { blankArray.push(0); }
+</script>
+</body>
+</html>

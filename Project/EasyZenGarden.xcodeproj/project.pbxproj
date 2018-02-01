@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC063D5419E4A35A006D20E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC063D5319E4A35A006D20E1 /* main.m */; };
+		DC063D5719E4A35A006D20E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC063D5619E4A35A006D20E1 /* AppDelegate.m */; };
+		DC063D5F19E4A35A006D20E1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC063D5E19E4A35A006D20E1 /* GameViewController.m */; };
+		DC063D6219E4A35A006D20E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC063D6019E4A35A006D20E1 /* Main.storyboard */; };
+		DC063D6419E4A35A006D20E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC063D6319E4A35A006D20E1 /* Images.xcassets */; };
+		DC063D6719E4A35A006D20E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC063D6519E4A35A006D20E1 /* LaunchScreen.xib */; };
+		DC063D7319E4A35A006D20E1 /* EasyZenGardenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC063D7219E4A35A006D20E1 /* EasyZenGardenTests.m */; };
+		DC063D7F19E4A4BA006D20E1 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DC063D7E19E4A4BA006D20E1 /* GameScene.m */; };
+		DC063D8C19E4A740006D20E1 /* LevelData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC063D8B19E4A740006D20E1 /* LevelData.m */; };
+		DC063D9019E4A883006D20E1 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = DC063D8F19E4A883006D20E1 /* Board.m */; };
+		DC063D9319E4B10D006D20E1 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = DC063D9219E4B10D006D20E1 /* Tile.m */; };
+		DC0CA99619E7492A00E538E0 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0CA99519E7492A00E538E0 /* AppHelper.m */; };
+		DC0CA99919E749F300E538E0 /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0CA99819E749F300E538E0 /* GameData.m */; };
+		DC0CA99E19E7593400E538E0 /* ZenGarden.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC0CA99D19E7593400E538E0 /* ZenGarden.plist */; };
+		DCCB13E019ED2F9000A9B1C6 /* Textures.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCB13DF19ED2F9000A9B1C6 /* Textures.m */; };
+		DCF028731A019F9300D91730 /* Fireflies.sks in Resources */ = {isa = PBXBuildFile; fileRef = DCF028711A019F9300D91730 /* Fireflies.sks */; };
+		DCF028741A019F9300D91730 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF028721A019F9300D91730 /* spark.png */; };
+		DCF028761A01A21A00D91730 /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = DCF028751A01A21A00D91730 /* Magic.sks */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC063D6D19E4A35A006D20E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC063D4619E4A35A006D20E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC063D4D19E4A35A006D20E1;
+			remoteInfo = ZenGarden;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC063D4E19E4A35A006D20E1 /* EasyZenGarden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyZenGarden.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC063D5219E4A35A006D20E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC063D5319E4A35A006D20E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC063D5519E4A35A006D20E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DC063D5619E4A35A006D20E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DC063D5D19E4A35A006D20E1 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		DC063D5E19E4A35A006D20E1 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		DC063D6119E4A35A006D20E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC063D6319E4A35A006D20E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC063D6619E4A35A006D20E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DC063D6C19E4A35A006D20E1 /* EasyZenGardenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyZenGardenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC063D7119E4A35A006D20E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC063D7219E4A35A006D20E1 /* EasyZenGardenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyZenGardenTests.m; sourceTree = "<group>"; };
+		DC063D7D19E4A4BA006D20E1 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Scenes/GameScene.h; sourceTree = "<group>"; };
+		DC063D7E19E4A4BA006D20E1 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = Scenes/GameScene.m; sourceTree = "<group>"; };
+		DC063D8A19E4A740006D20E1 /* LevelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelData.h; path = GameData/LevelData.h; sourceTree = "<group>"; };
+		DC063D8B19E4A740006D20E1 /* LevelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelData.m; path = GameData/LevelData.m; sourceTree = "<group>"; };
+		DC063D8E19E4A883006D20E1 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Board.h; path = Board/Board.h; sourceTree = "<group>"; };
+		DC063D8F19E4A883006D20E1 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Board.m; path = Board/Board.m; sourceTree = "<group>"; };
+		DC063D9119E4B10D006D20E1 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tile.h; path = Board/Tile.h; sourceTree = "<group>"; };
+		DC063D9219E4B10D006D20E1 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tile.m; path = Board/Tile.m; sourceTree = "<group>"; };
+		DC0CA99419E7492A00E538E0 /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppHelper.h; path = GameData/AppHelper.h; sourceTree = "<group>"; };
+		DC0CA99519E7492A00E538E0 /* AppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppHelper.m; path = GameData/AppHelper.m; sourceTree = "<group>"; };
+		DC0CA99719E749F300E538E0 /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameData.h; path = GameData/GameData.h; sourceTree = "<group>"; };
+		DC0CA99819E749F300E538E0 /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameData.m; path = GameData/GameData.m; sourceTree = "<group>"; };
+		DC0CA99D19E7593400E538E0 /* ZenGarden.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZenGarden.plist; sourceTree = "<group>"; };
+		DCCB13DE19ED2F9000A9B1C6 /* Textures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Textures.h; path = GameData/Textures.h; sourceTree = "<group>"; };
+		DCCB13DF19ED2F9000A9B1C6 /* Textures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Textures.m; path = GameData/Textures.m; sourceTree = "<group>"; };
+		DCF028711A019F9300D91730 /* Fireflies.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fireflies.sks; sourceTree = "<group>"; };
+		DCF028721A019F9300D91730 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		DCF028751A01A21A00D91730 /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC063D4B19E4A35A006D20E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC063D6919E4A35A006D20E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC063D4519E4A35A006D20E1 = {
+			isa = PBXGroup;
+			children = (
+				DC063D5019E4A35A006D20E1 /* EasyZenGarden */,
+				DC063D6F19E4A35A006D20E1 /* EasyZenGardenTests */,
+				DC063D4F19E4A35A006D20E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC063D4F19E4A35A006D20E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC063D4E19E4A35A006D20E1 /* EasyZenGarden.app */,
+				DC063D6C19E4A35A006D20E1 /* EasyZenGardenTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC063D5019E4A35A006D20E1 /* EasyZenGarden */ = {
+			isa = PBXGroup;
+			children = (
+				DC063D5519E4A35A006D20E1 /* AppDelegate.h */,
+				DC063D5619E4A35A006D20E1 /* AppDelegate.m */,
+				DC063D5D19E4A35A006D20E1 /* GameViewController.h */,
+				DC063D5E19E4A35A006D20E1 /* GameViewController.m */,
+				DC063D7C19E4A38F006D20E1 /* Scenes */,
+				DC063D8019E4A505006D20E1 /* GameData */,
+				DC063D8D19E4A858006D20E1 /* Board */,
+				DC063D6319E4A35A006D20E1 /* Images.xcassets */,
+				DC063D5119E4A35A006D20E1 /* Supporting Files */,
+				DC063D6019E4A35A006D20E1 /* Main.storyboard */,
+				DC063D6519E4A35A006D20E1 /* LaunchScreen.xib */,
+				DCF028721A019F9300D91730 /* spark.png */,
+				DCF028711A019F9300D91730 /* Fireflies.sks */,
+				DCF028751A01A21A00D91730 /* Magic.sks */,
+			);
+			name = EasyZenGarden;
+			path = ZenGarden;
+			sourceTree = "<group>";
+		};
+		DC063D5119E4A35A006D20E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC063D5219E4A35A006D20E1 /* Info.plist */,
+				DC063D5319E4A35A006D20E1 /* main.m */,
+				DC0CA99D19E7593400E538E0 /* ZenGarden.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC063D6F19E4A35A006D20E1 /* EasyZenGardenTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC063D7219E4A35A006D20E1 /* EasyZenGardenTests.m */,
+				DC063D7019E4A35A006D20E1 /* Supporting Files */,
+			);
+			name = EasyZenGardenTests;
+			path = ZenGardenTests;
+			sourceTree = "<group>";
+		};
+		DC063D7019E4A35A006D20E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC063D7119E4A35A006D20E1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC063D7C19E4A38F006D20E1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DC063D7D19E4A4BA006D20E1 /* GameScene.h */,
+				DC063D7E19E4A4BA006D20E1 /* GameScene.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		DC063D8019E4A505006D20E1 /* GameData */ = {
+			isa = PBXGroup;
+			children = (
+				DC0CA99719E749F300E538E0 /* GameData.h */,
+				DC0CA99819E749F300E538E0 /* GameData.m */,
+				DC0CA99419E7492A00E538E0 /* AppHelper.h */,
+				DC0CA99519E7492A00E538E0 /* AppHelper.m */,
+				DC063D8A19E4A740006D20E1 /* LevelData.h */,
+				DC063D8B19E4A740006D20E1 /* LevelData.m */,
+				DCCB13DE19ED2F9000A9B1C6 /* Textures.h */,
+				DCCB13DF19ED2F9000A9B1C6 /* Textures.m */,
+			);
+			name = GameData;
+			sourceTree = "<group>";
+		};
+		DC063D8D19E4A858006D20E1 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				DC063D8E19E4A883006D20E1 /* Board.h */,
+				DC063D8F19E4A883006D20E1 /* Board.m */,
+				DC063D9119E4B10D006D20E1 /* Tile.h */,
+				DC063D9219E4B10D006D20E1 /* Tile.m */,
+			);
+			name = Board;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC063D4D19E4A35A006D20E1 /* EasyZenGarden */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC063D7619E4A35A006D20E1 /* Build configuration list for PBXNativeTarget "EasyZenGarden" */;
+			buildPhases = (
+				DC063D4A19E4A35A006D20E1 /* Sources */,
+				DC063D4B19E4A35A006D20E1 /* Frameworks */,
+				DC063D4C19E4A35A006D20E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyZenGarden;
+			productName = ZenGarden;
+			productReference = DC063D4E19E4A35A006D20E1 /* EasyZenGarden.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC063D6B19E4A35A006D20E1 /* EasyZenGardenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC063D7919E4A35A006D20E1 /* Build configuration list for PBXNativeTarget "EasyZenGardenTests" */;
+			buildPhases = (
+				DC063D6819E4A35A006D20E1 /* Sources */,
+				DC063D6919E4A35A006D20E1 /* Frameworks */,
+				DC063D6A19E4A35A006D20E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC063D6E19E4A35A006D20E1 /* PBXTargetDependency */,
+			);
+			name = EasyZenGardenTests;
+			productName = ZenGardenTests;
+			productReference = DC063D6C19E4A35A006D20E1 /* EasyZenGardenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC063D4619E4A35A006D20E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Adam Dill";
+				TargetAttributes = {
+					DC063D4D19E4A35A006D20E1 = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 8D54JLM69C;
+					};
+					DC063D6B19E4A35A006D20E1 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = DC063D4D19E4A35A006D20E1;
+					};
+				};
+			};
+			buildConfigurationList = DC063D4919E4A35A006D20E1 /* Build configuration list for PBXProject "EasyZenGarden" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC063D4519E4A35A006D20E1;
+			productRefGroup = DC063D4F19E4A35A006D20E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC063D4D19E4A35A006D20E1 /* EasyZenGarden */,
+				DC063D6B19E4A35A006D20E1 /* EasyZenGardenTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC063D4C19E4A35A006D20E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC063D6719E4A35A006D20E1 /* LaunchScreen.xib in Resources */,
+				DCF028761A01A21A00D91730 /* Magic.sks in Resources */,
+				DC063D6419E4A35A006D20E1 /* Images.xcassets in Resources */,
+				DC063D6219E4A35A006D20E1 /* Main.storyboard in Resources */,
+				DCF028741A019F9300D91730 /* spark.png in Resources */,
+				DCF028731A019F9300D91730 /* Fireflies.sks in Resources */,
+				DC0CA99E19E7593400E538E0 /* ZenGarden.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC063D6A19E4A35A006D20E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC063D4A19E4A35A006D20E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0CA99919E749F300E538E0 /* GameData.m in Sources */,
+				DC063D9019E4A883006D20E1 /* Board.m in Sources */,
+				DC063D5F19E4A35A006D20E1 /* GameViewController.m in Sources */,
+				DC063D5719E4A35A006D20E1 /* AppDelegate.m in Sources */,
+				DC063D8C19E4A740006D20E1 /* LevelData.m in Sources */,
+				DC063D7F19E4A4BA006D20E1 /* GameScene.m in Sources */,
+				DC063D9319E4B10D006D20E1 /* Tile.m in Sources */,
+				DC063D5419E4A35A006D20E1 /* main.m in Sources */,
+				DCCB13E019ED2F9000A9B1C6 /* Textures.m in Sources */,
+				DC0CA99619E7492A00E538E0 /* AppHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC063D6819E4A35A006D20E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC063D7319E4A35A006D20E1 /* EasyZenGardenTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC063D6E19E4A35A006D20E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC063D4D19E4A35A006D20E1 /* EasyZenGarden */;
+			targetProxy = DC063D6D19E4A35A006D20E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC063D6019E4A35A006D20E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC063D6119E4A35A006D20E1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC063D6519E4A35A006D20E1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC063D6619E4A35A006D20E1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC063D7419E4A35A006D20E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Adam Dill (8D54JLM69C)";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DC063D7519E4A35A006D20E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Adam Dill (8D54JLM69C)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC063D7719E4A35A006D20E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ZenGarden/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = EasyZenGarden;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		DC063D7819E4A35A006D20E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ZenGarden/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = EasyZenGarden;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		DC063D7A19E4A35A006D20E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ZenGardenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = EasyZenGardenTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyZenGarden.app/EasyZenGarden";
+			};
+			name = Debug;
+		};
+		DC063D7B19E4A35A006D20E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ZenGardenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = EasyZenGardenTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyZenGarden.app/EasyZenGarden";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC063D4919E4A35A006D20E1 /* Build configuration list for PBXProject "EasyZenGarden" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC063D7419E4A35A006D20E1 /* Debug */,
+				DC063D7519E4A35A006D20E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC063D7619E4A35A006D20E1 /* Build configuration list for PBXNativeTarget "EasyZenGarden" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC063D7719E4A35A006D20E1 /* Debug */,
+				DC063D7819E4A35A006D20E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC063D7919E4A35A006D20E1 /* Build configuration list for PBXNativeTarget "EasyZenGardenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC063D7A19E4A35A006D20E1 /* Debug */,
+				DC063D7B19E4A35A006D20E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC063D4619E4A35A006D20E1 /* Project object */;
+}
